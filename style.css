@@ -1,0 +1,140 @@
+* {
+  font-family: 'Oswald', sans-serif;
+
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  background-image: url(./img/bg-1.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+
+  width: 100%;
+
+  @media (max-width: 800px) {
+    /* display: none; */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: #251607;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    z-index: 10;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  a {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #251607;
+
+    @media (max-width: 800px) {
+      color: whitesmoke;
+    }
+  }
+}
+
+.logo,
+.burger {
+  display: none;
+
+  @media (max-width: 800px) {
+    display: block;
+    z-index: 11;
+    cursor: pointer;
+  }
+}
+
+.header {
+  padding: 52px 0 0;
+
+  @media (max-width: 800px) {
+    background-image: url(./img/bg-2.png);
+    background-position: center;
+    padding: 40px 0;
+  }
+}
+
+.hero__wrapper{
+    text-align: center;
+
+    h1{
+        font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
+        line-height: 1;
+
+        @media (max-width:480px) {
+            padding: 20px 0 0;
+        }
+    }
+
+    p{
+        margin-bottom: 30px;
+        font-size: clamp(1.125rem, 1.044rem + 0.33vw, 1.375rem);
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @media (max-width:480px) {
+            padding: 20px 0;
+        }
+    }
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        @media (max-width:480px) {
+            &:first-child{
+                display: none;
+            }
+            justify-content: center;
+        }
+
+    }
+
+    img{
+        width: 100%;
+    }
+}
