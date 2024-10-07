@@ -102,6 +102,8 @@ body {
     h1{
         font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
         line-height: 1;
+        z-index: -1;
+        position: relative;
 
         @media (max-width:480px) {
             padding: 20px 0 0;
@@ -137,4 +139,91 @@ body {
     img{
         width: 100%;
     }
+}
+
+.swiper-slide{
+  img{
+    width: 100%;
+  }
+}
+
+.album{
+  margin-top: 100px;
+
+  .container{
+    max-width: 1900px;
+    padding: 0;
+  }
+}
+
+
+.meet__wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+
+  @media (max-width:800px) {
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  p{
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 500;
+    
+  }
+}
+
+.meet__right{
+
+  p{
+    text-align: right;
+    max-width: 800px;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-top: 73.5px;
+
+    @media (max-width:800px) {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  h2{
+    font-size: clamp(3.25rem, 0.792rem + 9.83vw, 10.625rem);
+    text-transform: uppercase;
+  }
+
+  img{
+    margin-bottom: 20px;
+  }
+}
+
+.meet{
+  padding: 100px 0;
+}
+
+.china-1{
+
+  @media (max-width:800px) {
+    display: none;
+  }
+}
+
+.china-2{
+  display: none;
+  width: 60%;
+  
+  @media (max-width:800px) {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
 }
