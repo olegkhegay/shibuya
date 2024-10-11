@@ -96,134 +96,317 @@ body {
   }
 }
 
-.hero__wrapper{
-    text-align: center;
+.hero__wrapper {
+  text-align: center;
 
-    h1{
-        font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
-        line-height: 1;
-        z-index: -1;
-        position: relative;
+  h1 {
+    font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
+    line-height: 1;
+    z-index: -1;
+    position: relative;
 
-        @media (max-width:480px) {
-            padding: 20px 0 0;
-        }
+    @media (max-width: 480px) {
+      padding: 20px 0 0;
     }
+  }
 
-    p{
-        margin-bottom: 30px;
-        font-size: clamp(1.125rem, 1.044rem + 0.33vw, 1.375rem);
-        font-weight: 600;
-        text-transform: uppercase;
+  p {
+    margin-bottom: 30px;
+    font-size: clamp(1.125rem, 1.044rem + 0.33vw, 1.375rem);
+    font-weight: 600;
+    text-transform: uppercase;
 
-        @media (max-width:480px) {
-            padding: 20px 0;
-        }
+    @media (max-width: 480px) {
+      padding: 20px 0;
     }
+  }
 
-    div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 
-        @media (max-width:480px) {
-            &:first-child{
-                display: none;
-            }
-            justify-content: center;
-        }
-
+    @media (max-width: 480px) {
+      &:first-child {
+        display: none;
+      }
+      justify-content: center;
     }
+  }
 
-    img{
-        width: 100%;
-    }
-}
-
-.swiper-slide{
-  img{
+  img {
     width: 100%;
   }
 }
 
-.album{
+.swiper-slide {
+  img {
+    width: 100%;
+  }
+}
+
+.album {
   margin-top: 100px;
 
-  .container{
+  .container {
     max-width: 1900px;
     padding: 0;
   }
 }
 
-
-.meet__wrapper{
+.meet__wrapper {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 50px;
 
-  @media (max-width:800px) {
+  @media (max-width: 800px) {
     /* grid-template-columns: 1fr; */
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
   }
 
-  img{
+  img {
     width: 100%;
   }
 
-  p{
+  p {
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 500;
-    
   }
 }
 
-.meet__right{
-
-  p{
+.meet__right {
+  p {
     text-align: right;
     max-width: 800px;
     margin-left: auto;
     margin-bottom: 30px;
     margin-top: 73.5px;
 
-    @media (max-width:800px) {
+    @media (max-width: 800px) {
       text-align: center;
       margin-top: 30px;
     }
   }
 
-  h2{
+  h2 {
     font-size: clamp(3.25rem, 0.792rem + 9.83vw, 10.625rem);
     text-transform: uppercase;
   }
 
-  img{
+  img {
     margin-bottom: 20px;
   }
 }
 
-.meet{
+.meet {
   padding: 100px 0;
 }
 
-.china-1{
-
-  @media (max-width:800px) {
+.china-1 {
+  @media (max-width: 800px) {
     display: none;
   }
 }
 
-.china-2{
+.china-2 {
   display: none;
   width: 60%;
-  
-  @media (max-width:800px) {
+
+  @media (max-width: 800px) {
     display: block;
     margin: 0 auto;
     margin-top: 30px;
   }
+}
+
+.our {
+}
+.our__title {
+  text-align: center;
+  text-transform: uppercase;
+}
+.our__wrapper {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    'card-1 card-2 card-4'
+    'card-1 card-3 card-5';
+
+    @media (max-width: 1100px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 20px 20px;
+      grid-template-areas:
+        'card-1 card-1'
+        'card-2 card-3'
+        'card-4 card-5';
+    }
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 20px 20px;
+      grid-template-areas:
+      'card-1'
+      'card-2'
+      'card-3'
+      'card-4'
+      'card-5';
+      text-align: center;
+    }
+    
+
+  .card-1 {
+    grid-area: card-1;
+    background-image: url(/img/plans-1.png);
+  }
+  .card-2 {
+    grid-area: card-2;
+    background-image: url(/img/plans-2.png);
+  }
+  .card-4 {
+    grid-area: card-4;
+    background-image: url(./img/plans-3.png);
+  }
+  .card-3 {
+    grid-area: card-3;
+    background-image: url(./img/plans-4.png);
+  }
+  .card-5 {
+    grid-area: card-5;
+    background-image: url(./img/plans-5.png);
+  }
+}
+.our__card {
+  min-height: 350px;
+  border: 3px solid black;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  text-transform: uppercase;
+  cursor: pointer;
+
+  p {
+    color: #aeaeae;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+
+    @media (max-width: 700px) {
+      height: auto;
+    }
+  }
+
+  h3 {
+    transition: 0.5s;
+    color: #FFF0E1;
+    font-size: 30px;
+
+    @media (max-width: 700px) {
+      font-size: 30px;
+    }
+  }
+
+  &:hover {
+    p {
+      height: 30px;
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+  }
+
+  
+}
+
+.our__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @media (max-width: 700px) {
+    text-align: center;
+  }
+}
+
+
+.team {
+  padding: 100px 0;
+}
+.team__wrapper {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  gap: 60px;
+}
+.team__wrap {
+
+  h2{
+    font-size: 180px;
+    text-transform: uppercase;
+
+  }
+}
+.team__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 30px;
+
+}
+.team__card {
+  border: 3px solid black;
+  min-height: 250px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: end;
+  padding: 25px;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #fff8e1;
+  font-weight: 600;
+
+  background-size: 120%;
+  transition: 0.6s;
+
+  &:hover{
+    background-size: 160%;
+  }
+
+  &:nth-child(1){
+    background-image: url(./img/team-1.png);
+  }
+  &:nth-child(2){
+    background-image: url(./img/team-2.png);
+  }
+  &:nth-child(3){
+    background-image: url(./img/team-3.png);
+  }
+  &:nth-child(4){
+    background-image: url(./img/team-4.png);
+  }
+}
+.team__img {
+  width: 100%;
 }
